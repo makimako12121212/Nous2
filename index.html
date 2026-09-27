@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Pour Toi, Mon Amour 🤍 | Rien ne pourra éteindre notre lumière</title>
+  
+  <!-- Meta SEO & Social Sharing -->
+  <meta name="description" content="Une lettre d'amour interactive et un album de nos souvenirs pour te rappeler à quel point tu es unique et précieuse.">
+  <meta name="theme-color" content="#FFE4E6">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Favicon Heart -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤍</text></svg>">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Ambient Particles Canvas -->
+  <canvas id="ambientCanvas"></canvas>
+
+  <!-- Top Ambient Navigation & Sound Toggle -->
+  <nav class="top-nav">
+    <div class="nav-brand">
+      <span class="pulse-heart">🤍</span>
+      <span class="nav-brand-text">Pour Toi</span>
+    </div>
+    <div class="nav-actions">
+      <button id="musicToggleBtn" class="pill-btn music-btn" aria-label="Ton chanteur favori">
+        <span class="music-icon">🎤</span>
+        <span class="music-label">Ton chanteur favori</span>
+        <div class="sound-wave">
+          <span></span><span></span><span></span>
+        </div>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO / EN-TÊTE DE RÉCONFORT -->
+  <header class="hero-section">
+    <div class="hero-container">
+      <div class="badge-pill fade-in">
+        <span class="badge-star">✨</span>
+        <span>Pour la femme la plus précieuse à mes yeux</span>
+      </div>
+
+      <h1 class="hero-title fade-in delay-1">
+        Rien ne pourra jamais <br>
+        <span class="highlight-text">éteindre notre lumière.</span>
+      </h1>
+
+      <p class="hero-intro fade-in delay-2">
+        Mon amour, ces derniers jours ont peut-être apporté quelques nuages, des doutes et des prises de tête qui t'ont blessée ou fait perdre confiance. Mais je veux que tu lises ceci attentivement, avec tout ton cœur :
+      </p>
+
+      <div class="love-letter-card fade-in delay-3">
+        <div class="letter-quote-mark">“</div>
+        <div class="letter-body">
+          <p>
+            <strong>Ne doute jamais de toi. Jamais.</strong> Les petites frictions ne définiront jamais ce qu'on est l'un pour l'autre. Elles ne sont que des vagues passagères sur un océan d'amour immense et indestructible.
+          </p>
+          <p>
+            Si seulement tu pouvais te regarder à travers mes yeux ne serait-ce qu'une minute... Tu verrais à quel point tu es <strong>brillante</strong>, <strong>incroyablement belle</strong>, <strong>douce</strong>, <strong>forte</strong> et <strong>essentielle</strong> à mon bonheur.
+          </p>
+          <p>
+            Ce site est ton petit sanctuaire secret : un rappel permanent de nos rires, de nos regards complices et de tout ce qui nous unit. Quoi qu'il arrive, souviens-toi qu'on est et qu'on restera <em>toujours dans la même équipe</em>.
+          </p>
+        </div>
+        <div class="letter-signature">
+          <span>Avec tout mon amour, pour toujours</span>
+          <span class="signature-name">Ton homme qui t'aime 🤍</span>
+        </div>
+      </div>
+
+      <!-- Quick Trust Badges -->
+      <div class="trust-pills fade-in delay-4">
+        <div class="trust-pill">
+          <span class="pill-emoji">🛡️</span>
+          <span>Toujours dans la même équipe</span>
+        </div>
+        <div class="trust-pill">
+          <span class="pill-emoji">🌸</span>
+          <span>Mon évidence absolue</span>
+        </div>
+        <div class="trust-pill">
+          <span class="pill-emoji">🔒</span>
+          <span>À tes côtés contre tout</span>
+        </div>
+      </div>
+
+      <a href="#galerie" class="scroll-down-btn" aria-label="Découvrir nos souvenirs">
+        <span>Nos plus beaux souvenirs</span>
+        <svg class="chevron-down" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- SECTION SOUVENIRS / GALERIE INTERACTIVE -->
+  <section id="galerie" class="gallery-section">
+    <div class="section-header">
+      <span class="section-tag">Album de Souvenirs</span>
+      <h2 class="section-title">Nos Instants Précieux</h2>
+      <p class="section-subtitle">Chaque photo est la preuve vivante de notre complicité et de la douceur de notre histoire.</p>
+    </div>
+
+    <div class="gallery-grid">
+      
+      <!-- PHOTO 1: 8065.jpg (WANTED One Piece) -->
+      <article class="memory-card wanted-card" data-memory="wanted">
+        <div class="card-media-wrapper wanted-frame" onclick="openLightbox('images/8065.jpg', 'Avis de Recherche : Wanted One Piece', 'Recherchée pour avoir volé mon cœur au premier regard. Prime : Inestimable !', this)">
+          <span class="wanted-seal">MARINE</span>
+          <img src="images/8065.jpg" alt="Avis de recherche Wanted One Piece photomaton" loading="lazy" class="memory-img">
+          <div class="media-overlay">
+            <span class="zoom-pill">🔍 Agrandir</span>
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="card-badge">🏴‍☠️ Notre Avis de Recherche</div>
+          <h3 class="card-title">Recherchée pour m'avoir volé mon cœur</h3>
+          <p class="card-desc">
+            Prime : <strong>Inestimable</strong>. Nos délires complices, nos rires d'enfants même dans une minuscule cabine de photomaton. Avec toi, n'importe quel moment ordinaire devient une aventure mémorable.
+          </p>
+          <div class="card-footer-note">
+            <span class="note-icon">✨</span>
+            <span>Toujours complices comme au premier jour</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- PHOTO 2: 7807.jpg (Cinéma, concentrée / boudeuse) -->
+      <article class="memory-card cinema-card" data-memory="cinema">
+        <div class="card-media-wrapper" onclick="openLightbox('images/7807.jpg', 'Ta Petite Moue Adorable', 'Dans la pénombre du cinéma, concentrée sur ton téléphone... Même quand tu boudes un peu, tu es la plus belle.', this)">
+          <span class="cozy-badge">🎬 Séance Cinéma</span>
+          <img src="images/7807.jpg" alt="Elle concentrée au cinéma sur son téléphone avec une petite moue adorable" loading="lazy" class="memory-img">
+          <div class="media-overlay">
+            <span class="zoom-pill">🔍 Agrandir</span>
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="card-badge">🍿 Petite Moue & Réflexion</div>
+          <h3 class="card-title">Même quand tu boudes, tu es magnifique</h3>
+          <p class="card-desc">
+            Dans la pénombre de la salle, assise dans les fauteuils rouges, absorbée par ton écran avec cette petite lèvre pincée... Tu es tellement touchante et mignonne quand tu es dans tes pensées. Même tes petits moments de doute ont une douceur infinie.
+          </p>
+          <div class="card-footer-note">
+            <span class="note-icon">🤍</span>
+            <span>J'aime chacune de tes expressions</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- PHOTO 3: 7723.jpg (Selfie sous plafonnier, main devant le visage) -->
+      <article class="memory-card polaroid-card" data-memory="spontane">
+        <div class="card-media-wrapper" onclick="openLightbox('images/7723.jpg', 'Ta Lumière Spontanée', 'Inutile de cacher ton visage : ta beauté et ta bienveillance brillent à travers tout.', this)">
+          <span class="tape-sticker"></span>
+          <img src="images/7723.jpg" alt="Selfie spontané sous les plafonniers, main cachant délicatement une partie du visage" loading="lazy" class="memory-img">
+          <div class="media-overlay">
+            <span class="zoom-pill">🔍 Agrandir</span>
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="card-badge">💡 Spontané & Vrai</div>
+          <h3 class="card-title">Inutile de te cacher : tu illumines tout</h3>
+          <p class="card-desc">
+            Tu as beau cacher une partie de ton visage avec ta main, tes yeux rieurs et ta présence irradient la pièce. Ce naturel désarmant et cette complicité sans filtre sont ce qui me fait craquer chaque jour.
+          </p>
+          <div class="card-footer-note">
+            <span class="note-icon">✨</span>
+            <span>Ta lumière ne s'éteint jamais</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- PHOTO 4: 7595.jpg (Voiture Snapchat "Avec mon trophées dhomme du match") -->
+      <article class="memory-card trophy-card" data-memory="trophy">
+        <div class="card-media-wrapper" onclick="openLightbox('images/7595.jpg', 'Le Vrai Trophée de ma Vie', 'Avec mon trophée dhomme du match... Le plus beau des trophées, c’est toi à mes côtés.', this)">
+          <span class="snap-badge">Snapchat 👻</span>
+          <img src="images/7595.jpg" alt="Selfie voiture avec la légende Snapchat : Avec mon trophées dhomme du match" loading="lazy" class="memory-img">
+          <div class="media-overlay">
+            <span class="zoom-pill">🔍 Agrandir</span>
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="card-badge">🏆 Le Vrai Trophée</div>
+          <h3 class="card-title">Le seul trophée qui compte</h3>
+          <p class="card-desc">
+            Sur la route avec toi, les bêtises sur Snap, la musique dans l'habitacle et nos fous rires... Tu as écrit <em>"Avec mon trophée d'homme du match"</em>, mais la vérité c'est que c'est moi qui ai gagné le plus grand des trophées en t'ayant dans ma vie.
+          </p>
+          <div class="card-footer-note">
+            <span class="note-icon">🚘</span>
+            <span>Nos trajets sont mes moments préférés</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- PHOTO 5: 7542.jpg (Voiture de nuit, grand sourire, main sur le cou/épaule) -->
+      <article class="memory-card night-card wide-card" data-memory="douceur">
+        <div class="card-media-wrapper landscape-wrapper" onclick="openLightbox('images/7542.jpg', 'Mon Havre de Paix', 'Ta main posée sur mon cou dans la voiture... Dès que tu me touches, tout le stress disparaît.', this)">
+          <span class="night-glow-badge">🌙 Nuit & Douceur</span>
+          <img src="images/7542.jpg" alt="Selfie chaleureux et souriant en voiture la nuit, main posée avec tendresse sur l'épaule et le cou" loading="lazy" class="memory-img">
+          <div class="media-overlay">
+            <span class="zoom-pill">🔍 Agrandir</span>
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="card-badge">🫂 Mon Refuge Absolu</div>
+          <h3 class="card-title">Ta main contre moi, et le monde s'apaise</h3>
+          <p class="card-desc">
+            La nuit dans la voiture, nos sourires fatigués mais tellement sereins. Quand ta main se pose sur mon épaule ou contre mon cou, tout le bruit et tout le stress du monde extérieur s'évanouissent. Tu es mon havre de paix, l'endroit où je me sens toujours chez moi.
+          </p>
+          <div class="card-footer-note">
+            <span class="note-icon">🤍</span>
+            <span>Ta présence est mon plus grand réconfort</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- PHOTO 6: 7543.jpg (Silhouette main levée dans la voiture) -->
+      <article class="memory-card detail-card" data-memory="details">
+        <div class="card-media-wrapper" onclick="openLightbox('images/7543.jpg', 'La Grâce de tes Détails', 'Tes mains, tes bagues, tes gestes... Mille petites choses qui me font t’aimer chaque seconde.', this)">
+          <img src="images/7543.jpg" onerror="this.onerror=null; this.src='images/7543.svg';" alt="Gros plan silhouette main levée dans la voiture" loading="lazy" class="memory-img">
+          <div class="media-overlay">
+            <span class="zoom-pill">🔍 Agrandir</span>
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="card-badge">✨ Les Petits Détails</div>
+          <h3 class="card-title">Chaque geste me rappelle pourquoi je t'aime</h3>
+          <p class="card-desc">
+            Ta façon de bouger tes mains, tes bagues dorées qui scintillent dans la nuit, l'élégance naturelle de tes doigts... Ce ne sont pas juste des détails, ce sont toutes ces petites étincelles qui rendent ton être unique et si cher à mon cœur.
+          </p>
+          <div class="card-footer-note">
+            <span class="note-icon">💍</span>
+            <span>Tenir ta main est mon habitude favorite</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- PHOTO 7: illustration_douce.jpg ou 15456488623456909014.jpg (Notre Cocon Romantique) -->
+      <article class="memory-card cocon-card wide-card" data-memory="cocon">
+        <div class="card-media-wrapper illustration-wrapper" onclick="openLightbox('images/illustration_douce.jpg', 'Notre Cocon Éternel', 'Sous notre arche de fleurs et de lumière, rien ne peut nous atteindre. Plus forts ensemble.', this)">
+          <span class="cocon-badge">🌸 Notre Cocon</span>
+          <img src="images/illustration_douce.jpg" onerror="if (this.src.indexOf('15456488623456909014.jpg') === -1 && this.src.indexOf('.svg') === -1) { this.src='images/15456488623456909014.jpg'; } else if (this.src.indexOf('.svg') === -1) { this.src='images/illustration_douce.svg'; }" alt="Illustration romantique d'un couple enlacé sous un cœur de fleurs et de lumières féeriques" loading="lazy" class="memory-img">
+          <div class="media-overlay">
+            <span class="zoom-pill">🔍 Agrandir</span>
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="card-badge">🕊️ Notre Sanctuaire</div>
+          <h3 class="card-title">Plus forts que toutes les tempêtes</h3>
+          <p class="card-desc">
+            Voici l'image symbolique de ce que nous sommes : deux cœurs protégés dans une bulle de douceur et de fleurs lumineuses. Qu'importe ce qui se passe autour, tant qu'on se serre l'un contre l'autre, aucun doute ne pourra jamais nous séparer.
+          </p>
+          <div class="card-footer-note">
+            <span class="note-icon">✨</span>
+            <span>Un amour solide, sincère et durable</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- SECTION INTERACTIVE : "L'ESCAPE GAME DE NOTRE AMOUR" -->
+  <section id="escape-game" class="escape-section">
+    <div class="section-header">
+      <span class="section-tag">Aventure & Mystère</span>
+      <h2 class="section-title">L'Escape Game de Notre Cœur 🔐</h2>
+      <p class="section-subtitle">Déchiffre les 7 énigmes et codes secrets qui mènent à notre coffre-fort d'amour.</p>
+    </div>
+
+    <div class="escape-container">
+      
+      <!-- Stepper / Jalons alignés 1 à 7 -->
+      <div class="escape-stepper" id="escapeStepper">
+        <div class="stepper-track">
+          <div class="stepper-progress-fill" id="stepperProgressFill"></div>
+        </div>
+        <div class="step-nodes">
+          <div class="step-node active" data-step="1">
+            <span class="node-circle">1</span>
+            <span class="node-label">Aliya</span>
+          </div>
+          <div class="step-node" data-step="2">
+            <span class="node-circle">2</span>
+            <span class="node-label">Origines</span>
+          </div>
+          <div class="step-node" data-step="3">
+            <span class="node-circle">3</span>
+            <span class="node-label">Étoile</span>
+          </div>
+          <div class="step-node" data-step="4">
+            <span class="node-circle">4</span>
+            <span class="node-label">Complice</span>
+          </div>
+          <div class="step-node" data-step="5">
+            <span class="node-circle">5</span>
+            <span class="node-label">Mots Doux</span>
+          </div>
+          <div class="step-node" data-step="6">
+            <span class="node-circle">6</span>
+            <span class="node-label">Date Clé</span>
+          </div>
+          <div class="step-node" data-step="7">
+            <span class="node-circle">7</span>
+            <span class="node-label">Clé d'Or</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Zone de Jeu / Énigme Active -->
+      <div class="escape-game-box" id="escapeGameBox">
+        <div class="enigma-header">
+          <div class="padlock-badge" id="padlockIcon">🔒</div>
+          <span class="enigma-step-tag" id="enigmaStepTag">Étape 1 sur 7</span>
+          <h3 class="enigma-title" id="enigmaTitle">La Femme de ma Vie</h3>
+        </div>
+
+        <div class="enigma-body">
+          <p class="enigma-riddle" id="enigmaRiddle">
+            Cinq lettres qui définissent la plus belle personne de cet univers. La seule à qui mon cœur appartiendra toujours... Qui es-tu ?
+          </p>
+
+          <!-- Bouton Indice pliable -->
+          <div class="hint-wrapper">
+            <button type="button" class="hint-toggle-btn" id="hintToggleBtn" onclick="toggleHint()">
+              <span>💡 Besoin d'un indice ?</span>
+            </button>
+            <div class="hint-text hidden" id="hintText">
+              Indice : C'est le doux prénom de la fille que j'aime le plus au monde.
+            </div>
+          </div>
+
+          <!-- Formulaire de saisie du code -->
+          <form class="enigma-form" id="enigmaForm" onsubmit="submitEscapeCode(event)">
+            <div class="input-group">
+              <input type="text" id="escapeInput" class="escape-input" placeholder="Entre le code secret ici..." autocomplete="off" spellcheck="false" required>
+              <button type="submit" class="escape-submit-btn" id="escapeSubmitBtn">
+                <span>Valider</span>
+                <span class="btn-arrow">🔓</span>
+              </button>
+            </div>
+            <div class="enigma-feedback" id="enigmaFeedback"></div>
+          </form>
+        </div>
+      </div>
+
+      <!-- COFFRE-FORT DÉVERROUILLÉ (Caché au départ, révélé à l'étape finale) -->
+      <div class="vault-unlocked-card hidden" id="vaultUnlockedCard">
+        <div class="vault-sparkles">🌟 🤍 👑 🤍 🌟</div>
+        <div class="vault-seal">ALIYA & RYANE • AMOUR ÉTERNEL</div>
+        <h3 class="vault-title">Félicitations mon amour ! Le Coffre est Ouvert 🔓</h3>
+        <p class="vault-subtitle">Tu as trouvé tous les codes secrets qui composent notre histoire.</p>
+        
+        <div class="vault-letter">
+          <h4>Le Grand Serment d'Amour d'Aliya & Ryane</h4>
+          <p>
+            Mon amour <strong>Aliya</strong>, si tu lis ces mots, c'est que tu as déverrouillé chacune des étapes de notre histoire. De ma naissance le <strong>23/12/2004</strong> à la tienne le <strong>10/12/2006</strong>, jusqu'à notre jour gravé du <strong>02/08/2025</strong>, le destin avait déjà tout écrit pour nous.
+          </p>
+          <p>
+            Tu es mon <strong>bébé</strong>, mon <strong>cœur</strong>, ma force et ma certitude. N'oublie jamais que quoi qu'il arrive, quelles que soient les petites disputes ou les doutes qui peuvent traverser ton esprit, <strong>Ryane</strong> sera toujours là pour toi.
+          </p>
+          <p>
+            Tu as réussi cet Escape Game avec brio, exactement comme tu réussiras chaque projet et chaque défi dans ta vie. Ne doute jamais de ta valeur : tu es une reine.
+          </p>
+          <div class="vault-code-climax">
+            <span>🤍 JE T'AIME POUR TOUJOURS 🤍</span>
+          </div>
+        </div>
+
+        <div class="vault-actions">
+          <button type="button" class="pill-btn replay-btn" onclick="resetEscapeGame()">
+            <span>↻ Recommencer l'Escape Game</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION INTERACTIVE : "LA BOÎTE À RÉCONFORT" -->
+  <section id="reconfort" class="comfort-section">
+    <div class="section-header">
+      <span class="section-tag">Espace Douceur</span>
+      <h2 class="section-title">Ouvre ça quand tu doutes de toi 💌</h2>
+      <p class="section-subtitle">Choisis ce que tu ressens en ce moment pour recevoir les mots que ton cœur a besoin d'entendre.</p>
+    </div>
+
+    <div class="comfort-container">
+      <!-- Selector Tabs -->
+      <div class="comfort-tabs" role="tablist">
+        <button class="comfort-tab active" data-tab="tab-valeur" role="tab">
+          <span class="tab-emoji">🌸</span>
+          <span class="tab-title">Quand tu doutes de ta valeur</span>
+        </button>
+        <button class="comfort-tab" data-tab="tab-dispute" role="tab">
+          <span class="tab-emoji">🕊️</span>
+          <span class="tab-title">Quand nos disputes t'inquiètent</span>
+        </button>
+        <button class="comfort-tab" data-tab="tab-beauté" role="tab">
+          <span class="tab-emoji">👑</span>
+          <span class="tab-title">Quand tu ne te trouves 'pas assez'</span>
+        </button>
+        <button class="comfort-tab" data-tab="tab-fatigue" role="tab">
+          <span class="tab-emoji">🌙</span>
+          <span class="tab-title">Quand tu te sens triste ou fatiguée</span>
+        </button>
+        <button class="comfort-tab" data-tab="tab-pardon" role="tab">
+          <span class="tab-emoji">🫂</span>
+          <span class="tab-title">Quand j'ai été maladroit</span>
+        </button>
+      </div>
+
+      <!-- Content Panels -->
+      <div class="comfort-panels">
+        
+        <div id="tab-valeur" class="comfort-panel active">
+          <div class="panel-header">
+            <span class="panel-icon">🌟</span>
+            <h3>Tu es tellement plus forte et brillante que tu ne le crois</h3>
+          </div>
+          <div class="panel-text">
+            <p>
+              Prends une grande inspiration, mon cœur. Regarde tout ce que tu accomplis au quotidien, ta persévérance, ton intelligence et ta sensibilité.
+            </p>
+            <p>
+              Ce que tu ressens en ce moment n'est qu'un passage à vide, une ombre qui passe devant le soleil. Mais le soleil ne disparaît jamais : <strong>ta valeur est immense, intacte et indiscutable</strong>. Ne laisse jamais une mauvaise journée te faire douter de la femme incroyable que tu es.
+            </p>
+            <div class="panel-highlight">
+              💬 <em>"Je crois en toi de tout mon être, même les jours où tu as du mal à y croire toi-même."</em>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-dispute" class="comfort-panel">
+          <div class="panel-header">
+            <span class="panel-icon">🤝</span>
+            <h3>Une dispute ne change rien à notre amour</h3>
+          </div>
+          <div class="panel-text">
+            <p>
+              C'est tout à fait normal de ne pas être d'accord sur tout, d'avoir des moments de fatigue ou de s'énerver pour des bêtises. Deux personnes qui s'aiment intensément peuvent parfois se heurter.
+            </p>
+            <p>
+              Mais retiens bien cette règle d'or : <strong>ce n'est JAMAIS toi contre moi. C'est TOI ET MOI ensemble contre le problème.</strong>
+            </p>
+            <p>
+              Je ne te lâcherai jamais la main pour des malentendus. On apprend, on grandit, et chaque réconciliation nous rend deux fois plus complices.
+            </p>
+            <div class="panel-highlight">
+              💬 <em>"Tu es mon choix d'hier, d'aujourd'hui et de tous les lendemains."</em>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-beauté" class="comfort-panel">
+          <div class="panel-header">
+            <span class="panel-icon">💖</span>
+            <h3>À mes yeux, tu es parfaite</h3>
+          </div>
+          <div class="panel-text">
+            <p>
+              Arrête tout de suite de te dévaloriser ! Tu as un charme fou, un regard qui me bouleverse et un sourire qui réchauffe n'importe quelle journée grise.
+            </p>
+            <p>
+              Que tu sois apprêtée ou au réveil, souriante ou pensive avec ta petite moue adorable, tu es celle qui me captive. Tu n'as rien à prouver, personne à imiter : c'est <em>toi</em>, dans toute ton authenticité, que j'aime.
+            </p>
+            <div class="panel-highlight">
+              💬 <em>"Tu n'es pas 'assez bien' : tu es exceptionnelle, tout simplement."</em>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-fatigue" class="comfort-panel">
+          <div class="panel-header">
+            <span class="panel-icon">☕</span>
+            <h3>Lâche prise, viens te reposer dans mes bras</h3>
+          </div>
+          <div class="panel-text">
+            <p>
+              Tu as le droit d'être fatiguée. Tu as le droit d'avoir envie de pleurer ou de ne rien faire. Tu n'es pas obligée de porter le monde sur tes épaules à chaque seconde.
+            </p>
+            <p>
+              Détends tes épaules, bois un verre d'eau, et rappelle-toi que je suis là. Mes bras te serviront toujours d'abri quand le reste devient trop lourd. Repose-toi, je veille sur toi.
+            </p>
+            <div class="panel-highlight">
+              💬 <em>"Respire. Rien n'est grave tant qu'on est ensemble."</em>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-pardon" class="comfort-panel">
+          <div class="panel-header">
+            <span class="panel-icon">🙏</span>
+            <h3>Pardonne-moi si je t'ai blessée</h3>
+          </div>
+          <div class="panel-text">
+            <p>
+              Si j'ai eu des mots trop durs, si j'ai manqué d'attention ou si ma fierté a pris le dessus, je te demande sincèrement pardon. Mon intention la plus profonde sera toujours de te protéger et de te chérir, jamais de te faire de la peine.
+            </p>
+            <p>
+              Je ne suis pas parfait, mais mon engagement auprès de toi est total. Dis-moi ce qui te pèse, je suis là pour t'écouter sans jugement et pour te serrer fort.
+            </p>
+            <div class="panel-highlight">
+              💬 <em>"Un câlin vaut mieux que mille justifications. Viens là 🤍."</em>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION INTERACTIVE : GÉNÉRATEUR DE MOTS DOUX À L'INFINI -->
+  <section class="compliments-section">
+    <div class="compliment-card">
+      <div class="compliment-sparkles">✨ 🤍 ✨</div>
+      <h2 class="compliment-heading">Besoin d'un Sourire Instantané ?</h2>
+      <p class="compliment-sub">Appuie sur mon cœur chaque fois que tu as besoin d'une dose de tendresse.</p>
+      
+      <div class="compliment-display-box" id="complimentBox">
+        <span class="quote-icon">“</span>
+        <p id="complimentText">Tu es la plus belle chose qui me soit arrivée, ne l'oublie jamais.</p>
+        <span class="quote-icon quote-end">”</span>
+      </div>
+
+      <button id="giveLoveBtn" class="big-heart-btn" aria-label="Recevoir un mot doux">
+        <span class="heart-pulse-icon">❤️</span>
+        <span class="btn-text">Touche mon cœur</span>
+      </button>
+
+      <div class="love-counter">
+        <span id="counterValue">0</span> pensées d'amour débloquées pour toi aujourd'hui
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION : LES 10 VÉRITÉS QUE TU NE DOIS JAMAIS OUBLIER -->
+  <section class="truths-section">
+    <div class="section-header">
+      <span class="section-tag">Mes Engagements</span>
+      <h2 class="section-title">10 Vérités Gravées dans le Marbre</h2>
+      <p class="section-subtitle">Touche les cartes pour découvrir ce que je te promets chaque jour.</p>
+    </div>
+
+    <div class="truths-grid">
+      <div class="truth-card" onclick="this.classList.toggle('flipped')">
+        <div class="truth-inner">
+          <div class="truth-front">
+            <span class="truth-num">01</span>
+            <h4>L'écoute</h4>
+            <span class="tap-hint">Toucher ↻</span>
+          </div>
+          <div class="truth-back">
+            <p>Je serai toujours là pour t'écouter avec patience, même dans tes silences les plus lourds.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="truth-card" onclick="this.classList.toggle('flipped')">
+        <div class="truth-inner">
+          <div class="truth-front">
+            <span class="truth-num">02</span>
+            <h4>Ton sourire</h4>
+            <span class="tap-hint">Toucher ↻</span>
+          </div>
+          <div class="truth-back">
+            <p>Voir tes yeux pétiller est l'accomplissement le plus précieux de ma journée.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="truth-card" onclick="this.classList.toggle('flipped')">
+        <div class="truth-inner">
+          <div class="truth-front">
+            <span class="truth-num">03</span>
+            <h4>Tes doutes</h4>
+            <span class="tap-hint">Toucher ↻</span>
+          </div>
+          <div class="truth-back">
+            <p>Tu as le droit d'avoir peur et de douter ; je serai ton rocher pour te rappeler ta force.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="truth-card" onclick="this.classList.toggle('flipped')">
+        <div class="truth-inner">
+          <div class="truth-front">
+            <span class="truth-num">04</span>
+            <h4>Nos disputes</h4>
+            <span class="tap-hint">Toucher ↻</span>
+          </div>
+          <div class="truth-back">
+            <p>Elles ne détruisent rien : elles nous apprennent à nous aimer avec encore plus de justesse.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="truth-card" onclick="this.classList.toggle('flipped')">
+        <div class="truth-inner">
+          <div class="truth-front">
+            <span class="truth-num">05</span>
+            <h4>Ta beauté</h4>
+            <span class="tap-hint">Toucher ↻</span>
+          </div>
+          <div class="truth-back">
+            <p>Ton élégance et ton naturel me touchent au plus profond. Tu es sublime, tout simplement.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="truth-card" onclick="this.classList.toggle('flipped')">
+        <div class="truth-inner">
+          <div class="truth-front">
+            <span class="truth-num">06</span>
+            <h4>Ma place</h4>
+            <span class="tap-hint">Toucher ↻</span>
+          </div>
+          <div class="truth-back">
+            <p>À tes côtés, dans la voiture ou n'importe où sur terre, je me sens enfin à ma place.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="truth-card" onclick="this.classList.toggle('flipped')">
+        <div class="truth-inner">
+          <div class="truth-front">
+            <span class="truth-num">07</span>
+            <h4>Ton humour</h4>
+            <span class="tap-hint">Toucher ↻</span>
+          </div>
+          <div class="truth-back">
+            <p>Tes petites blagues, tes vannes et nos délires valent tout l'or du monde.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="truth-card" onclick="this.classList.toggle('flipped')">
+        <div class="truth-inner">
+          <div class="truth-front">
+            <span class="truth-num">08</span>
+            <h4>Ton refuge</h4>
+            <span class="tap-hint">Toucher ↻</span>
+          </div>
+          <div class="truth-back">
+            <p>Dans les moments froids et difficiles, mes bras seront toujours ton sanctuaire protecteur.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="truth-card" onclick="this.classList.toggle('flipped')">
+        <div class="truth-inner">
+          <div class="truth-front">
+            <span class="truth-num">09</span>
+            <h4>Ma fierté</h4>
+            <span class="tap-hint">Toucher ↻</span>
+          </div>
+          <div class="truth-back">
+            <p>Je suis immensément fier de toi, de tes valeurs, de ton grand cœur et de tout ce que tu es.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="truth-card" onclick="this.classList.toggle('flipped')">
+        <div class="truth-inner">
+          <div class="truth-front">
+            <span class="truth-num">10</span>
+            <h4>Pour toujours</h4>
+            <span class="tap-hint">Toucher ↻</span>
+          </div>
+          <div class="truth-back">
+            <p>Je t'aime aujourd'hui, je t'aimerai demain, et encore plus fort à chaque instant qui passe.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTION FINALE : CÂLIN VIRTUEL & FOOTER -->
+  <footer class="footer-section">
+    <div class="footer-card">
+      <div class="floating-cuddle-icon">🫂</div>
+      <h2>Tu te sens un peu mieux ?</h2>
+      <p>Même à distance, ferme les yeux une seconde et imagine-moi en train de te serrer très fort contre moi.</p>
+      
+      <button id="sendCuddleBtn" class="cuddle-action-btn">
+        <span class="btn-emoji">💌</span>
+        <span>M'envoyer un Câlin Virtuel</span>
+      </button>
+
+      <div id="cuddleMessage" class="cuddle-feedback hidden">
+        <span>❤️ Câlin bien reçu dans mon cœur !</span>
+        <a id="whatsappLink" href="#" target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
+          <span>Lui envoyer un petit mot doux sur WhatsApp</span>
+          <span>💬</span>
+        </a>
+      </div>
+
+      <div class="footer-credits">
+        <p class="handwritten-note">Créé avec tout mon amour, rien que pour toi.</p>
+        <span class="end-date">Toujours à tes côtés 🤍</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL / LIGHTBOX -->
+  <div id="lightboxModal" class="lightbox-modal" aria-hidden="true" onclick="closeLightbox(event)">
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <button class="lightbox-close" onclick="closeLightbox()" aria-label="Fermer la vue agrandie">✕</button>
+      <div class="lightbox-img-wrapper">
+        <img id="lightboxImg" src="" alt="Photo souvenir agrandie">
+      </div>
+      <div class="lightbox-caption">
+        <h4 id="lightboxTitle"></h4>
+        <p id="lightboxDesc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Audio Element -->
+  <audio id="bgAudio" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="app.js"></script>
+</body>
+</html>
